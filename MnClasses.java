@@ -6,11 +6,8 @@ public class MnClasses {
 
 	public static double F(int k, int m, int n) {
 		Double r = 0.0;
-		if (k==0) r = 0.0;
 		else if (m==1&&n==1) r = 1.0;
-		else if (m<1 || n<1) r = 0.0;
-		else if (n>k) r = 0.0;
-		else if (m<n) r = 0.0;
+		else if (k<=0 || n>k || m<n || m<1 || n<1) r = 0.0;
 		else {
 			r = res.get(k+","+m+","+n);
 			if (r!=null) return r;
